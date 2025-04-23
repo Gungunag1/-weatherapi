@@ -1,7 +1,9 @@
 import requests
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
+CORS(app)
 API_KEY = "9579c6fb00ae4ceb973102635252204"
 
 @app.route("/weather", methods=["GET"])
